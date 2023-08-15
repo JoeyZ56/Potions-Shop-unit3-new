@@ -1,0 +1,16 @@
+//White background on auth page
+.AuthPage {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #B026FF;
+    border-radius: 2vmin;
+  }
+  
+  .AuthPage h3 {
+    font-size: 4vmin;
+    text-align: center;
+    color: whitesmoke;
+    cursor: pointer;
+  }

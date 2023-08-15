@@ -1,0 +1,19 @@
+.Logo {
+    height: 22vmin;
+    width: 22vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.Xk8GPqrFQ5O__8mBBhFq5gHaH4&pid=Api&P=0&h=220');
+    background-size: 100% 100%;
+    color: rgb(8, 221, 8);
+    font-size: 4vmin;
+    border: .6vmin solid var(--tan-2);
+    margin-top: 3vmin;
+    filter: drop-shadow(0px 20px 25px black);
+    }
+    .title {
+        margin-top: 50px;
+    }

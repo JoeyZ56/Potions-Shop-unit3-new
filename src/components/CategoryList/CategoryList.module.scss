@@ -1,0 +1,25 @@
+.CategoryList {
+    color: rgb(173, 4, 4);
+    list-style: none;
+    padding: 0;
+    font-size: 2vw;
+    }
+    
+    .CategoryList li {
+    padding: .6vmin;
+    text-align: center;
+    border-radius: .5vmin;
+    margin-bottom: .5vmin;
+    }
+    
+    .CategoryList li:hover:not(.active) {
+    cursor: pointer;
+    background-color: rgb(116, 32, 218);
+    color: var(--white);
+    }
+    
+    .CategoryList li.active {
+    color: var(--text-dark);
+    background-color: var(--tan-1);
+    border: .1vmin solid var(--tan-3);
+    }
