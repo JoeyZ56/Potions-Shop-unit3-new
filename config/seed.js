@@ -1,9 +1,7 @@
 require('dotenv').config();
 require('./database');
 
-//images
-import XLHealthPotion from '';
-
+const { src } = require('gulp');
 const Category = require('../models/category');
 const Item = require('../models/item');
 
@@ -22,52 +20,186 @@ const Item = require('../models/item');
 	await Item.deleteMany({});
 	const items = await Item.create([
 		{
-			name: 'Large Health Potion',
-			emoji: 'XLHealthPotion',
+			name: 'XL Health Potion',
+			emoji: '❤️‍🩹❤️‍🩹❤️‍🩹',
 			category: categories[0],
-			price: 5.95
+			price: 10,
+			description: '100% Healing, Hint of Strawberry'
 		},
 		{
-			name: 'Turkey Sandwich',
-			emoji: '🥪',
+			name: 'SM Health Potion',
+			emoji: '❤️‍🩹',
 			category: categories[0],
-			price: 6.95
+			price: 4,
+			description: '50% Healing, Hint of Cherry'
 		},
-		{ name: 'Hot Dog', emoji: '🌭', category: categories[0], price: 3.95 },
-		{ name: 'Crab Plate', emoji: '🦀', category: categories[1], price: 14.95 },
 		{
-			name: 'Fried Shrimp',
-			emoji: '🍤',
+			name: 'Health Potion',
+			emoji: '❤️‍🩹❤️‍🩹',
+			category: categories[0],
+			price: 6,
+			description: '25% Healing, Hint of Watermelon'
+		},
+		{
+			name: 'XL Mana Potion',
+			emoji: '🔷🔷🔷',
 			category: categories[1],
-			price: 13.95
+			price: 12,
+			description: '100% Mana Regen, Hint of Blueberry'
 		},
 		{
-			name: 'Whole Lobster',
-			emoji: '🦞',
+			name: 'Mana Potion',
+			emoji: '🔷🔷',
 			category: categories[1],
-			price: 25.95
+			price: 8,
+			description: '50% Mana Regen, Hint of Blue-Rasberry'
 		},
-		{ name: 'Taco', emoji: '🌮', category: categories[2], price: 1.95 },
-		{ name: 'Burrito', emoji: '🌯', category: categories[2], price: 4.95 },
-		{ name: 'Pizza Slice', emoji: '🍕', category: categories[3], price: 3.95 },
-		{ name: 'Spaghetti', emoji: '🍝', category: categories[3], price: 7.95 },
-		{ name: 'Garlic Bread', emoji: '🍞', category: categories[3], price: 1.95 },
-		{ name: 'French Fries', emoji: '🍟', category: categories[4], price: 2.95 },
-		{ name: 'Green Salad', emoji: '🥗', category: categories[4], price: 3.95 },
-		{ name: 'Ice Cream', emoji: '🍨', category: categories[5], price: 1.95 },
-		{ name: 'Cup Cake', emoji: '🧁', category: categories[5], price: 0.95 },
-		{ name: 'Custard', emoji: '🍮', category: categories[5], price: 2.95 },
 		{
-			name: 'Strawberry Shortcake',
-			emoji: '🍰',
+			name: 'SM Mana Potion',
+			emoji: '🔷',
+			category: categories[1],
+			price: 6,
+			description: '25% Mana Regen, Hint of Grape'
+		},
+		{
+			name: 'XL Stamina Potion',
+			emoji: '🧪🧪🧪',
+			category: categories[2],
+			price: 8,
+			description: '100% Stamina Regen, Hint of GrapeFruit'
+		},
+		{
+			name: 'Stamina Potion',
+			emoji: '🧪🧪',
+			category: categories[2],
+			price: 5,
+			description: '50% Stamina Regen, Hint of Green Apple'
+		},
+		{
+			name: 'Sm Stamina Potion',
+			emoji: '🧪',
+			category: categories[2],
+			price: 3,
+			description: '25% Stamina Regen, Hint of Cucumber'
+		},
+		{
+			name: 'Reg Love Potion',
+			emoji: '🥰',
+			category: categories[3],
+			price: 18,
+			description:
+				'Makes a person fall in Love with you for a day, Hints of Lavander'
+		},
+		{
+			name: 'Max Love Potion',
+			emoji: '❤️‍🔥',
+			category: categories[3],
+			price: 30,
+			description: 'Makes a person your soulmate, Hints of Passion Fruit'
+		},
+		{
+			name: 'Heart Break Potion',
+			emoji: '💔',
+			category: categories[3],
+			price: 25,
+			description: 'Makes a person not want you, Hints of Bitter'
+		},
+		{
+			name: 'Fire Resistence',
+			emoji: '🔥',
+			category: categories[4],
+			price: 50,
+			description: 'Makes you resistant to fire damage for 6 hours, VERY SPICY'
+		},
+		{
+			name: 'Frost Resistance',
+			emoji: '❄️',
+			category: categories[4],
+			price: 50,
+			description:
+				'Makes you resistant to frost damage for 6 hours, Hint of Mint'
+		},
+		{
+			name: 'Earth Resistance',
+			emoji: '🪨',
+			category: categories[4],
+			price: 50,
+			description:
+				'Makes you resistant to frost damage for 6 hours, Hint of Umami'
+		},
+		{
+			name: 'Lighting Resistance',
+			emoji: '⚡',
+			category: categories[4],
+			price: 50,
+			description:
+				'Makes you resistant to Lighting damage for 6 hours, Hint of Sour'
+		},
+		{
+			name: 'Super Strength',
+			emoji: '💪',
 			category: categories[5],
-			price: 3.95
+			price: 95,
+			description: 'Give you super strength for 10 min, Hint of Spinage'
 		},
-		{ name: 'Milk', emoji: '🥛', category: categories[6], price: 0.95 },
-		{ name: 'Coffee', emoji: '☕', category: categories[6], price: 0.95 },
-		{ name: 'Mai Tai', emoji: '🍹', category: categories[6], price: 8.95 },
-		{ name: 'Beer', emoji: '🍺', category: categories[6], price: 3.95 },
-		{ name: 'Wine', emoji: '🍷', category: categories[6], price: 7.95 }
+		{
+			name: 'Mana Overload',
+			emoji: '🪬',
+			category: categories[5],
+			price: 95,
+			description:
+				'Give you 200% increase to Mana capacity for 30 min, Hint of Cinnamon'
+		},
+		{
+			name: 'Far Sight',
+			emoji: '👁️‍🗨️',
+			category: categories[5],
+			price: 20,
+			description:
+				'Give you 500% of vision increase for 30 min, Hint of Apricote'
+		},
+		{
+			name: 'Max Charisma',
+			emoji: '😎',
+			category: categories[5],
+			price: 70,
+			description: 'Everyone wants to be your Friend! Hint of Guava'
+		},
+		{
+			name: 'Invisibility',
+			emoji: '🥷',
+			category: categories[6],
+			price: 900,
+			description: 'Makes You Invisible for 1 hour, Hint of Ginger'
+		},
+		{
+			name: 'Speak to Animals',
+			emoji: '🙉',
+			category: categories[6],
+			price: 250,
+			description: 'Cans speak to animals for 1 hour, Hint of Bacon'
+		},
+		{
+			name: 'Speak to the Dead',
+			emoji: '👻',
+			category: categories[6],
+			price: 400,
+			description: 'Can speak with the dead for 1 hour, Hint of coffiee'
+		},
+		{
+			name: 'Max Luck',
+			emoji: '🍀',
+			category: categories[6],
+			price: 1000,
+			description: 'Give you 1 hour of great fortune, Hint of Vanilla'
+		},
+		{
+			name: 'Liquid Happiness',
+			emoji: '🍺',
+			category: categories[6],
+			price: 5.95,
+			description: 'Makes you happy for 30 minutes, Hint of Hops'
+		}
 	]);
 
 	console.log(items);

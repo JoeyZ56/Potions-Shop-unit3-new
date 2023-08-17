@@ -23,10 +23,10 @@ export default function OrderDetail({
 			<div className={styles.sectionHeading}>
 				{order.isPaid ? (
 					<span>
-						ORDER <span className="smaller">{order.orderId}</span>
+						ORDER <span className="smaller">{order.orderId}: </span>
 					</span>
 				) : (
-					<span>NEW ORDER</span>
+					<span>NEW ORDER: </span>
 				)}
 				<span>{new Date(order.updatedAt).toLocaleDateString()}</span>
 			</div>
@@ -54,9 +54,7 @@ export default function OrderDetail({
 							</span>
 						</section>
 					</>
-				) : (
-					<div className={styles.hungry}>Hungry?</div>
-				)}
+				) : null}
 			</div>
 		</div>
 	);

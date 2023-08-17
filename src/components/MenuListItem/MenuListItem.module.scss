@@ -1,21 +1,14 @@
 .MenuListItem {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3vmin;
-    padding: 2vmin;
-    color: var(--text-light);
-    background-color: darkgray;
-    border: .1vmin solid var(--tan-3);
-    border-radius: 1vmin;
-    font-size: 4vmin;
+  margin-bottom: -18vmin;
+    transform-style: preserve-3d;
+    
   }
   
+  
   .MenuListItem .emoji {
-    height: 8vw;
-    width: 8vw;
-    font-size: 4vw;
+    height: 5vw;
+    width: 5vw;
+    font-size: 1.5vw;
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
@@ -27,13 +20,62 @@
   }
   
   .MenuListItem .buy span {
-    font-size: 1.7vw;
+    font-size: 2.5vw;
     text-align: center;
-    color: var(--text-light);
+    color: black;
+    font-weight: bold;
   }
   
   .MenuListItem .name {
     font-size: 2vw;
+    font-weight: bold;
     text-align: center;
+    color: black;
+  }
+  
+  
+
+  //cardflip
+  
+  .MenuListItem:hover {
+    transform: rotatex(180deg);
+    cursor: pointer;
+  }
+
+  .frontCard{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vmin;
+    padding: 2vmin;
     color: var(--text-light);
+    background-color: rgb(8, 221, 8);
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+    font-size: 4vmin;
+    backface-visibility: hidden;
+  }
+  .backCard{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vmin;
+    padding: 2vmin;
+    color: var(--text-light);
+    background-color: rgb(8, 221, 8);
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+    font-size: 4vmin;
+    backface-visibility: hidden;
+    transform: rotatex(180deg);
+  }
+  .MenuListItem .description {
+    color: black;
+    font-size: 3.5vmin;
+    text-align: center;
+    font-weight: bold;
+    
   }

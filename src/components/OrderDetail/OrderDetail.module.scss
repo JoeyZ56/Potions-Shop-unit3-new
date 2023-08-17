@@ -3,8 +3,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 3vmin;
-    font-size: 2vmin;
-    color: var(--text-light);
+    font-size: 3vmin;
+    color: var(--white);
   }
   
   .OrderDetail .sectionHeading {
@@ -24,15 +24,14 @@
     grid-template-columns: 18.35vw 5.75vw 5.25vw;
     padding: 1vmin 0;
     color: var(--text-light);
-    border-top: .1vmin solid var(--tan-3);
   }
   
   .OrderDetail .total span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vw;
-    color: var(--text-dark);
+    font-size: 2.5vw;
+    color: var(--white);
   }
   
   .OrderDetail .total span.right {

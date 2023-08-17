@@ -11,7 +11,7 @@
     --orange: #F67F00;
     --text-light: #968c84;
     --text-dark: #615954;
-    --dark-purple: 
+  
   }
   
   *, *:before, *:after {
@@ -25,12 +25,12 @@
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
     background-image: 
     url('https://wallpapercave.com/wp/wp8348926.jpg');
     background-size: 100% 100%;
-    padding: 2vmin;
-    height: 100vh;
-    width: 100vw;
 
   }
 
@@ -70,9 +70,6 @@
     justify-content: flex-end;
   }
   
-  .scroll-y {
-    overflow-y: scroll;
-  }
   
   .section-heading {
     display: flex;
@@ -180,11 +177,15 @@
   .theme-icon:hover {
     cursor: pointer;
   }
-  #theme1 {
-    background-image: 
-    url('https://wallpapercave.com/wp/wp8348926.jpg');
+#theme1 {
+  background-image: url('https://fthmb.tqn.com/1bd4rr3By8eKgdao17VI8JbBKAU=/3424x4957/filters:fill(auto,1)/beakers-with-smoking-liquid-97615426-59f720ee519de2001128ce34.jpg');
+  background-size: cover;
   }
   #theme2 {
     background-image: 
-    url('https://wallpaperaccess.com/full/1433643.jpg');
+    url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3fc0f3d5-6138-4b4c-bf96-985d8010c8c2/d962aqm-6b201a52-ab4d-4662-b6e2-7e5041538e6a.png/v1/fill/w_1192,h_670,q_75,strp/skyrim_potions_2nd_set___tes_5_by_etrelley-d962aqm.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zZmMwZjNkNS02MTM4LTRiNGMtYmY5Ni05ODVkODAxMGM4YzIvZDk2MmFxbS02YjIwMWE1Mi1hYjRkLTQ2NjItYjZlMi03ZTUwNDE1MzhlNmEucG5nIiwid2lkdGgiOiI8PTExOTIiLCJoZWlnaHQiOiI8PTY3MCJ9XV19.DFyBTiAYI7xcx7uSdLqjpn3AxVi9UGCLlux1mPtpCeA');
+    background-size: 100% 100%;
+
+
   }
+

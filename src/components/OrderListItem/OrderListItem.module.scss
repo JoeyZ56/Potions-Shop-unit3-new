@@ -5,11 +5,12 @@
     align-items: center;
     margin-bottom: 3vmin;
     padding: 2vmin;
-    color: var(--text-light);
-    background-color: var(--white);
-    border: .2vmin solid var(--tan-3);
+    color: black;
+    background-color: rgb(8, 221, 8);
+    border: .2vmin solid black;
     border-radius: 1vmin;
-    font-size: 2vmin;
+    font-size: 3vmin;
+    font-weight: bold;
     cursor: pointer;
     }
     
@@ -18,12 +19,12 @@
     }
     
     .OrderListItem.selected {
-    border-color: var(--orange);
+    border-color: var(--white);
     border-width: .2vmin;
     cursor: default;
     }
     
     .OrderListItem:not(.selected):hover {
-    border-color: var(--orange);
+    border-color: var(--white);
     border-width: .2vmin;
     }
