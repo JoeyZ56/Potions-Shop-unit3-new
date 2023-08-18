@@ -173,6 +173,10 @@
   //Theme label
   .theme-icon{
     color: white;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: flex-end;
   }
   .theme-icon:hover {
     cursor: pointer;
@@ -183,9 +187,36 @@
   }
   #theme2 {
     background-image: 
-    url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3fc0f3d5-6138-4b4c-bf96-985d8010c8c2/d962aqm-6b201a52-ab4d-4662-b6e2-7e5041538e6a.png/v1/fill/w_1192,h_670,q_75,strp/skyrim_potions_2nd_set___tes_5_by_etrelley-d962aqm.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8zZmMwZjNkNS02MTM4LTRiNGMtYmY5Ni05ODVkODAxMGM4YzIvZDk2MmFxbS02YjIwMWE1Mi1hYjRkLTQ2NjItYjZlMi03ZTUwNDE1MzhlNmEucG5nIiwid2lkdGgiOiI8PTExOTIiLCJoZWlnaHQiOiI8PTY3MCJ9XV19.DFyBTiAYI7xcx7uSdLqjpn3AxVi9UGCLlux1mPtpCeA');
+    url('https://i.pinimg.com/originals/ef/38/ba/ef38badaa26ec95ae254704a3937ff61.jpg');
     background-size: 100% 100%;
 
 
   }
 
+  //To About Page
+  .toAboutPage{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+
+  .toAboutPage:hover {
+    cursor: pointer;
+  }
+  .aboutusinfo{
+    color: var(--white);
+    font-size: 5vmin;
+    font-weight: bold;
+  }
+  .toneworderspage{
+    color: var(--white);
+        text-decoration: none;
+        font-size: 3vmin;
+        font-weight: bold;
+        margin-left: 9.5vmin;
+  
+}
+.aboutLogo {
+  margin-left: 3vmin;
+}

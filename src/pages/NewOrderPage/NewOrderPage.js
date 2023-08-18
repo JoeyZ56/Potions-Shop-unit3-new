@@ -56,7 +56,11 @@ export default function NewOrderPage({ user, setUser }) {
 	return (
 		<main className={styles.NewOrderPage}>
 			<aside>
+				<Link to="/about" className="toAboutPage">
+					About us
+				</Link>
 				<Logo />
+
 				<CategoryList
 					categories={categoriesRef.current}
 					cart={setCart}

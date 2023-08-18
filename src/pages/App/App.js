@@ -5,6 +5,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import AboutUs from '../About/AboutUs';
 
 export const ThemeContext = createContext(null);
 
@@ -33,6 +34,7 @@ export default function App() {
 					{user ? (
 						<>
 							<Routes>
+								<Route path="/about" element={<AboutUs />} />
 								{/* client-side route that renders the component instance if the path matches the url in the address bar */}
 								<Route
 									path="/orders/new"
