@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import AboutUs from '../About/AboutUs';
+import Navbar from '../../components/Navbar/Navbar';
 
 export const ThemeContext = createContext(null);
 
@@ -18,9 +19,9 @@ export default function App() {
 	};
 
 	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+		<ThemeContext.Provider>
 			<div id={theme}>
-				<label className="theme-icon">
+				{/* <label className="theme-icon">
 					THEME
 					<input
 						className="checkbox"
@@ -28,11 +29,12 @@ export default function App() {
 						vlaue={theme}
 						onClick={toggleTheme}
 					/>
-				</label>
+				</label> */}
 
 				<main className={styles.App}>
 					{user ? (
 						<>
+							<Navbar user={user} setUser={setUser} toggleTheme={toggleTheme} />
 							<Routes>
 								<Route path="/about" element={<AboutUs />} />
 								{/* client-side route that renders the component instance if the path matches the url in the address bar */}

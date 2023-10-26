@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 export default function AboutUs() {
 	return (
 		<div className={styles.AboutUs}>
-			<Link to="/orders/new" className="toneworderspage">
+			{/* <Link to="/orders/new" className="toneworderspage">
 				New Order
-			</Link>
+			</Link> */}
 			<div className="aboutLogo">
 				<Logo />
 			</div>

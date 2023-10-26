@@ -37,6 +37,7 @@ export default function OrderHistoryPage({ user, setUser }) {
 					About us
 				</Link>
 				<Logo />
+
 				<Link to="/orders/new" className="button btn-sm">
 					NEW ORDER
 				</Link>

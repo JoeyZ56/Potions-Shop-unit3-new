@@ -56,9 +56,9 @@ export default function NewOrderPage({ user, setUser }) {
 	return (
 		<main className={styles.NewOrderPage}>
 			<aside>
-				<Link to="/about" className="toAboutPage">
+				{/* <Link to="/about" className="toAboutPage">
 					About us
-				</Link>
+				</Link> */}
 				<Logo />
 
 				<CategoryList
