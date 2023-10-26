@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 import styles from './LoginForm.module.scss';
+import { motion } from 'framer-motion';
 
 export default function LoginForm({ setUser }) {
 	const [credentials, setCredentials] = useState({
@@ -32,11 +33,9 @@ export default function LoginForm({ setUser }) {
 		<div>
 			<div className="form-container">
 				<form autoComplete="off" onSubmit={handleSubmit}>
-					<label>
-						<b>Email</b>
-					</label>
 					{/* <br /> */}
 					<input
+						placeholder="Email"
 						className={styles.email}
 						type="text"
 						name="email"
@@ -44,12 +43,10 @@ export default function LoginForm({ setUser }) {
 						onChange={handleChange}
 						required
 					/>
-					{/* <br /> */}
-					<label>
-						<b>Password</b>
-					</label>
-					{/* <br /> */}
+
+					<br />
 					<input
+						placeholder="Password"
 						className={styles.password}
 						type="password"
 						name="password"
@@ -57,9 +54,15 @@ export default function LoginForm({ setUser }) {
 						onChange={handleChange}
 						required
 					/>
-					<button type="submit">
+					<br />
+					<motion.button
+						whileInView={{ opacity: 1 }}
+						whileHover={{ scale: 1.1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
+						type="submit"
+					>
 						<b>LOG IN</b>
-					</button>
+					</motion.button>
 				</form>
 			</div>
 			<p className="error-message">&nbsp;{error}</p>

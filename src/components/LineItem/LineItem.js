@@ -1,4 +1,5 @@
 import styles from './LineItem.module.scss';
+import { motion } from 'framer-motion';
 
 export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
 	return (
@@ -13,21 +14,27 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
 				style={{ justifyContent: isPaid && 'center' }}
 			>
 				{!isPaid && (
-					<button
+					<motion.button
+						whileInView={{ opacity: 1 }}
+						whileHover={{ scale: 1.1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
 						className="btn-xs"
 						onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty - 1)}
 					>
 						−
-					</button>
+					</motion.button>
 				)}
 				<span>{lineItem.qty}</span>
 				{!isPaid && (
-					<button
+					<motion.button
+						whileInView={{ opacity: 1 }}
+						whileHover={{ scale: 1.1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
 						className="btn-xs"
 						onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty + 1)}
 					>
 						+
-					</button>
+					</motion.button>
 				)}
 			</div>
 			<div className={styles.extPrice}>${lineItem.extPrice.toFixed(2)}</div>

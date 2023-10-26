@@ -26,6 +26,7 @@ export default function AboutUs() {
 						studied and Perfected there mixology to provide flavorful and
 						powerful elixirs.
 					</p>
+					<br />
 				</ul>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
     margin-bottom: 3vmin;
     padding: 2vmin;
     color: black;
-    background-color: rgb(8, 221, 8);
+    background-color: rgb(163, 56, 56);
     border: .2vmin solid black;
     border-radius: 1vmin;
     font-size: 3vmin;
@@ -27,4 +27,6 @@
     .OrderListItem:not(.selected):hover {
     border-color: var(--white);
     border-width: .2vmin;
+    
+    
     }

@@ -13,9 +13,12 @@
     --text-dark: #615954;
   
   }
+
+ 
   
   *, *:before, *:after {
     box-sizing: border-box;
+   
   }
 
   
@@ -26,11 +29,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: 
-    url('https://wallpapercave.com/wp/wp8348926.jpg');
-    background-size: 100% 100%;
+    
 
   }
 
@@ -60,6 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
   }
   
   .flex-col {
@@ -86,7 +86,12 @@
   
   .form-container {
     padding: 3vmin;
-    background-color: rgb(8, 221, 8);
+    background-color: rgba(
+        51,
+        51,
+        51,
+        0.8
+      ); 
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
     margin-top: 1rem;
@@ -98,10 +103,16 @@
   }
   
   form {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 1.25vmin;
-    color: var(--text-light);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+
+    input {
+      width: 30vw;
+      height: 3vw;
+     
+    }
   }
   
   label {
@@ -132,9 +143,10 @@
     margin: 1vmin;
     padding: 1vmin;
     color: var(--white);
-    background-color: rgb(115, 40, 136);
+    background-color: #111;
     font-size: 2.5vmin;
     font-weight: bold;
+    width: 10vw;
     text-decoration: none;
     text-align: center;
     border: .1vmin solid var(--tan-2);
@@ -149,8 +161,10 @@
   }
   
   button.btn-xs {
-    font-size: 1vmin;
+    font-size: 1rem;
     padding: .4vmin .5vmin;
+    font-weight: 900;
+    
   }
   
   button:disabled, form:invalid button[type="submit"] {
@@ -182,22 +196,26 @@
     cursor: pointer;
   }
 #theme1 {
-  background-image: url('https://fthmb.tqn.com/1bd4rr3By8eKgdao17VI8JbBKAU=/3424x4957/filters:fill(auto,1)/beakers-with-smoking-liquid-97615426-59f720ee519de2001128ce34.jpg');
+  background-image: url('https://wallpapercave.com/wp/wp8349011.jpg');
   background-size: cover;
+  overflow: hidden;
+.nav {
+  color: rgb(181, 27, 27);
+}
+  
   }
   #theme2 {
     background-image: 
-    url('https://i.pinimg.com/originals/ef/38/ba/ef38badaa26ec95ae254704a3937ff61.jpg');
-    background-size: 100% 100%;
+    url('https://www.lifewire.com/thmb/HnbtENcI8cE0Xt00TxZS2OyK_b8=/1920x1200/filters:no_upscale():max_bytes(150000):strip_icc()/wallcoo-witches-halloween-wallpaper-57ee8bfd5f9b586c353f2c79.jpg');
+    background-size: cover;
+    overflow: hidden;
 
-    #toggle-emoji::after {
-      button {
-        content: 🌙;
-      }
+   
+   
         
       
     }
-    }
+    
 
 
   

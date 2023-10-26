@@ -1,5 +1,6 @@
 import styles from './OrderDetail.module.scss';
 import LineItem from '../LineItem/LineItem';
+import { motion } from 'framer-motion';
 
 // Used to display the details of any order, including the cart (unpaid order)
 export default function OrderDetail({
@@ -40,13 +41,16 @@ export default function OrderDetail({
 							{order.isPaid ? (
 								<span className={styles.right}>TOTAL&nbsp;&nbsp;</span>
 							) : (
-								<button
+								<motion.button
+									whileInView={{ opacity: 1 }}
+									whileHover={{ scale: 1.1 }}
+									transition={{ duration: 0.5, type: 'tween' }}
 									className="btn-sm"
 									onClick={handleCheckout}
 									disabled={!lineItems.length}
 								>
 									CHECKOUT
-								</button>
+								</motion.button>
 							)}
 							<span>{order.totalQty}</span>
 							<span className={styles.right}>

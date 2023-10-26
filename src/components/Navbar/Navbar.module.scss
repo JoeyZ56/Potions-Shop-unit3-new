@@ -4,17 +4,29 @@
     align-items: center;
     flex-direction: row;
 
+   
+
+    background-color: rgba(
+        51,
+        51,
+        51,
+        0.8
+      ); 
+
     
 }
 
 .nav {
     display: flex;
+    justify-content: flex-start;
+
+    gap: 1rem;
     
    a {
-    color: #fff;
+    color: rgb(181, 27, 27);
     text-decoration: none;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 1000;
 
     margin-right: 20px;
     
@@ -23,11 +35,17 @@
    button {
          background: transparent;
          border: none;
-         color: #fff;
+         color: rgb(181, 27, 27);
          font-size: 3rem;
          font-weight: 700;
          margin-top: -0.6rem;
          
     cursor: pointer;
    }
+}
+
+.logout {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }

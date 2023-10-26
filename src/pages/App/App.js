@@ -7,6 +7,7 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import AboutUs from '../About/AboutUs';
 import Navbar from '../../components/Navbar/Navbar';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export const ThemeContext = createContext(null);
 
@@ -34,13 +35,19 @@ export default function App() {
 				<main className={styles.App}>
 					{user ? (
 						<>
-							<Navbar user={user} setUser={setUser} toggleTheme={toggleTheme} />
+							<Navbar user={user} setUser={setUser} />
 							<Routes>
 								<Route path="/about" element={<AboutUs />} />
 								{/* client-side route that renders the component instance if the path matches the url in the address bar */}
 								<Route
 									path="/orders/new"
-									element={<NewOrderPage user={user} setUser={setUser} />}
+									element={
+										<NewOrderPage
+											user={user}
+											setUser={setUser}
+											toggleTheme={toggleTheme}
+										/>
+									}
 								/>
 								<Route
 									path="/orders"

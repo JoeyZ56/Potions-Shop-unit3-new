@@ -1,19 +1,35 @@
 import React, { createContext, useState } from 'react';
 import styles from './Navbar.module.scss';
-import UserLogOut from '../UserLogOut/UserLogOut';
+import { motion } from 'framer-motion';
 
-export default function Navbar({ user, setUser, toggleTheme, UserLogOut }) {
+export default function Navbar() {
 	return (
 		<div className={styles.container}>
-			<div className={styles.nav}>
-				<a href="/">Home</a>
-				<a href="/orders/new">New Order</a>
-				<a href="/orders">Orders</a>
-				<a href="/about">About</a>
-
-				<button id="toggle-emoji" onClick={toggleTheme}>
-					☀️
-				</button>
+			<div className={styles.nav} id="nav">
+				<motion.a
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+					href="/orders/new"
+				>
+					New Order
+				</motion.a>
+				<motion.a
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+					href="/orders"
+				>
+					Orders
+				</motion.a>
+				<motion.a
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+					href="/about"
+				>
+					About
+				</motion.a>
 			</div>
 		</div>
 	);

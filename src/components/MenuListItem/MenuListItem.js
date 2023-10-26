@@ -1,4 +1,5 @@
 import styles from './MenuListItem.module.scss';
+import { motion } from 'framer-motion';
 
 export default function MenuListItem({ menuItem, handleAddToOrder }) {
 	return (
@@ -10,12 +11,15 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
 				<div className={styles.name}>{menuItem.name}</div>
 				<div className={styles.buy}>
 					<span>${menuItem.price.toFixed(2)}</span>
-					<button
+					<motion.button
+						whileInView={{ opacity: 1 }}
+						whileHover={{ scale: 1.1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
 						className="btn-sm"
 						onClick={() => handleAddToOrder(menuItem._id)}
 					>
 						ADD
-					</button>
+					</motion.button>
 				</div>
 			</div>
 			<div className={styles.backCard}>
@@ -25,12 +29,15 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
 				<div className={styles.description}>{menuItem.description}</div>
 				<div className={styles.buy}>
 					<span>${menuItem.price.toFixed(2)}</span>
-					<button
+					<motion.button
+						whileInView={{ opacity: 1 }}
+						whileHover={{ scale: 1.1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
 						className="btn-sm"
 						onClick={() => handleAddToOrder(menuItem._id)}
 					>
 						ADD
-					</button>
+					</motion.button>
 				</div>
 			</div>
 		</div>

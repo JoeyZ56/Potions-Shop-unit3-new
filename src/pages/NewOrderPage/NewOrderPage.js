@@ -8,8 +8,9 @@ import MenuList from '../../components/MenuList/MenuList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import { motion } from 'framer-motion';
 
-export default function NewOrderPage({ user, setUser }) {
+export default function NewOrderPage({ user, setUser, toggleTheme }) {
 	const [menuItems, setMenuItems] = useState([]);
 	const [activeCat, setActiveCat] = useState('');
 	const [cart, setCart] = useState(null);
@@ -66,10 +67,34 @@ export default function NewOrderPage({ user, setUser }) {
 					cart={setCart}
 					setActiveCat={setActiveCat}
 				/>
-				<Link to="/orders" className="button btn-sm">
-					PREVIOUS ORDERS
-				</Link>
-				<UserLogOut user={user} setUser={setUser} />
+				{/* <motion.div
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+				>
+					<Link to="/orders" className="button btn-sm">
+						PREVIOUS ORDERS
+					</Link>
+				</motion.div> */}
+				<motion.div
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+					className={styles.button}
+				>
+					<button onClick={toggleTheme} className="button btn-sm">
+						THEME
+					</button>
+				</motion.div>
+				<br />
+				<motion.div
+					whileInView={{ opacity: 1 }}
+					whileHover={{ scale: 1.1 }}
+					transition={{ duration: 0.5, type: 'tween' }}
+					className={styles.logout}
+				>
+					<UserLogOut user={user} setUser={setUser} />
+				</motion.div>
 			</aside>
 			<MenuList
 				menuItems={menuItems.filter((item) => item.category.name === activeCat)}

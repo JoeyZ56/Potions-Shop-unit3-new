@@ -192,13 +192,6 @@ const Item = require('../models/item');
 			category: categories[6],
 			price: 1000,
 			description: 'Give you 1 hour of great fortune, Hint of Vanilla'
-		},
-		{
-			name: 'Liquid Happiness',
-			emoji: '🍺',
-			category: categories[6],
-			price: 5.95,
-			description: 'Makes you happy for 30 minutes, Hint of Hops'
 		}
 	]);
 

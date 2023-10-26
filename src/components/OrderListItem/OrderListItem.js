@@ -1,4 +1,5 @@
 import styles from './OrderListItem.module.scss';
+import { motion } from 'framer-motion';
 
 export default function OrderListItem({
 	order,
@@ -6,7 +7,10 @@ export default function OrderListItem({
 	handleSelectOrder
 }) {
 	return (
-		<div
+		<motion.div
+			whileInView={{ opacity: 1 }}
+			whileHover={{ scale: 1.1 }}
+			transition={{ duration: 0.5, type: 'tween' }}
 			className={`${styles.OrderListItem} ${isSelected ? styles.selected : ''}`}
 			onClick={() => handleSelectOrder(order)}
 		>
@@ -24,6 +28,6 @@ export default function OrderListItem({
 					{order.totalQty} Item{order.totalQty > 1 ? 's' : ''}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
