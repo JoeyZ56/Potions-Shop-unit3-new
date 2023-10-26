@@ -32,14 +32,21 @@ const dataController = {
 	async login(req, res, next) {
 		try {
 			const user = await User.findOne({ email: req.body.email });
-			if (!user) throw new Error();
+			if (!user) {
+				return res.status(404).json({ message: 'User not found' });
+			}
+
 			const match = await bcrypt.compare(req.body.password, user.password);
-			if (!match) throw new Error();
+			if (!match) {
+				return res.status(401).json({ message: 'Bad Credentials' });
+			}
+
 			res.locals.data.user = user;
 			res.locals.data.token = createJWT(user);
 			next();
-		} catch {
-			res.status(400).json('Bad Credentials');
+		} catch (error) {
+			console.error('Error in login:', error);
+			return res.status(500).json({ message: 'Internal Server Error' });
 		}
 	}
 };
