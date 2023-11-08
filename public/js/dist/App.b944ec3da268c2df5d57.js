@@ -81,7 +81,9 @@ function LineItem(_ref) {
     },
     className: "btn-xs",
     onClick: () => handleChangeQty(lineItem.item._id, lineItem.qty - 1)
-  }, "\u2212"), /*#__PURE__*/React.createElement("span", null, lineItem.qty), !isPaid && /*#__PURE__*/React.createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.button, {
+  }, "\u2212"), /*#__PURE__*/React.createElement("span", {
+    className: _LineItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].qty
+  }, lineItem.qty), !isPaid && /*#__PURE__*/React.createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.button, {
     whileInView: {
       opacity: 1
     },
@@ -792,7 +794,12 @@ function App() {
   const toggleTheme = () => {
     setTheme(curr => curr === 'theme1' ? 'theme2' : 'theme1');
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ThemeContext.Provider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ThemeContext.Provider, {
+    value: {
+      theme,
+      toggleTheme
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: theme
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
@@ -1427,7 +1434,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZeRW57PNaWpYVsw6JlaC {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 3vmin;
+  font-size: 3rem;
+  color: #fff;
+  gap: 1rem;
 }
 
 .ZeRW57PNaWpYVsw6JlaC .iZ6oJDRJlBAjRnxPhUy5 {
@@ -1439,7 +1448,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZeRW57PNaWpYVsw6JlaC {
 
 .ZeRW57PNaWpYVsw6JlaC button {
   margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/LineItem/LineItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,gDAAA;EACA,gBAAA;EACA,YAAA;EACA,kCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;AACJ;;AAEI;EACA,yCAAA;AACJ;;AAEI;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,gBAAA;AACJ;;AAEI;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,gBAAA;AACJ;;AAEI;EACA,SAAA;AACJ","sourcesContent":[".LineItem {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: black;\n    background-color: rgb(153, 82, 82);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    font-size: 3vmin;\n    font-weight: bold;\n    }\n    \n    .LineItem:last-child {\n    border-bottom: .1vmin solid var(--tan-3);\n    }\n    \n    .LineItem .qty {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 3vmin;\n    }\n    \n    .LineItem .extPrice {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: 3vmin;\n    }\n    \n    .LineItem button {\n    margin: 0;\n    }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/LineItem/LineItem.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,gDAAA;EACA,gBAAA;EACA,YAAA;EACA,kCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;AACJ;;AAEI;EACA,yCAAA;AACJ;;AAEI;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;AACJ;;AAEI;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,gBAAA;AACJ;;AAEI;EACA,SAAA;AACJ","sourcesContent":[".LineItem {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;\n    padding: 1vmin 0;\n    color: black;\n    background-color: rgb(153, 82, 82);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    font-size: 3vmin;\n    font-weight: bold;\n    }\n    \n    .LineItem:last-child {\n    border-bottom: .1vmin solid var(--tan-3);\n    }\n    \n    .LineItem .qty {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 3rem;\n    color: #fff;\n    gap: 1rem;\n    }\n    \n    .LineItem .extPrice {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: 3vmin;\n    }\n    \n    .LineItem button {\n    margin: 0;\n    }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"LineItem": `ZeRW57PNaWpYVsw6JlaC`,
@@ -1700,7 +1709,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.iGbvxRf_0qd72CF3n2MQ {
 .xw8qBkbk_qLDD8Jt0Bf8 a {
   color: rgb(181, 27, 27);
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 1000;
   margin-right: 20px;
 }
@@ -1712,18 +1721,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.iGbvxRf_0qd72CF3n2MQ {
   font-weight: 700;
   margin-top: -0.6rem;
   cursor: pointer;
-}
-
-.et8baU7JOygM0qEAWjY0 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}`, "",{"version":3,"sources":["webpack://./src/components/Navbar/Navbar.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EAIA,uCAAA;AAFJ;;AAYA;EACI,aAAA;EACA,2BAAA;EAEA,SAAA;AAVJ;AAYG;EACC,uBAAA;EACA,qBAAA;EACA,eAAA;EACA,iBAAA;EAEA,kBAAA;AAXJ;AAeG;EACM,uBAAA;EACA,YAAA;EACA,uBAAA;EACA,eAAA;EACA,gBAAA;EACA,mBAAA;EAEL,eAAA;AAdJ;;AAkBA;EACI,aAAA;EACA,qBAAA;EACA,uBAAA;AAfJ","sourcesContent":[".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n\n   \n\n    background-color: rgba(\n        51,\n        51,\n        51,\n        0.8\n      ); \n\n    \n}\n\n.nav {\n    display: flex;\n    justify-content: flex-start;\n\n    gap: 1rem;\n    \n   a {\n    color: rgb(181, 27, 27);\n    text-decoration: none;\n    font-size: 3rem;\n    font-weight: 1000;\n\n    margin-right: 20px;\n    \n   }\n\n   button {\n         background: transparent;\n         border: none;\n         color: rgb(181, 27, 27);\n         font-size: 3rem;\n         font-weight: 700;\n         margin-top: -0.6rem;\n         \n    cursor: pointer;\n   }\n}\n\n.logout {\n    display: flex;\n    align-items: flex-end;\n    justify-content: center;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Navbar/Navbar.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EAIA,uCAAA;AAFJ;;AAYA;EACI,aAAA;EACA,2BAAA;EAEA,SAAA;AAVJ;AAYG;EACC,uBAAA;EACA,qBAAA;EACA,eAAA;EACA,iBAAA;EAEA,kBAAA;AAXJ;AAeG;EACM,uBAAA;EACA,YAAA;EACA,uBAAA;EACA,eAAA;EACA,gBAAA;EACA,mBAAA;EAEL,eAAA;AAdJ","sourcesContent":[".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n\n   \n\n    background-color: rgba(\n        51,\n        51,\n        51,\n        0.8\n      ); \n\n    \n}\n\n.nav {\n    display: flex;\n    justify-content: flex-start;\n\n    gap: 1rem;\n    \n   a {\n    color: rgb(181, 27, 27);\n    text-decoration: none;\n    font-size: 2rem;\n    font-weight: 1000;\n\n    margin-right: 20px;\n    \n   }\n\n   button {\n         background: transparent;\n         border: none;\n         color: rgb(181, 27, 27);\n         font-size: 3rem;\n         font-weight: 700;\n         margin-top: -0.6rem;\n         \n    cursor: pointer;\n   }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": `iGbvxRf_0qd72CF3n2MQ`,
-	"nav": `xw8qBkbk_qLDD8Jt0Bf8`,
-	"logout": `et8baU7JOygM0qEAWjY0`
+	"nav": `xw8qBkbk_qLDD8Jt0Bf8`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

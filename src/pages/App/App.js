@@ -20,18 +20,8 @@ export default function App() {
 	};
 
 	return (
-		<ThemeContext.Provider>
+		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 			<div id={theme}>
-				{/* <label className="theme-icon">
-					THEME
-					<input
-						className="checkbox"
-						type="checkbox"
-						vlaue={theme}
-						onClick={toggleTheme}
-					/>
-				</label> */}
-
 				<main className={styles.App}>
 					{user ? (
 						<>

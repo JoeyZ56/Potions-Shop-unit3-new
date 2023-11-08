@@ -24,7 +24,7 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
 						−
 					</motion.button>
 				)}
-				<span>{lineItem.qty}</span>
+				<span className={styles.qty}>{lineItem.qty}</span>
 				{!isPaid && (
 					<motion.button
 						whileInView={{ opacity: 1 }}
